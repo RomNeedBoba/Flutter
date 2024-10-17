@@ -1,0 +1,19 @@
+class Distnce {
+  final double _meters;
+  const Distnce._(this._meters);
+
+  Distnce.kms(double kms) : _meters = kms * 1000;
+  Distnce.meters(double meters) : _meters = meters;
+  Distnce.cms(double cms) : _meters = cms / 100;
+  double get kms => _meters / 1000;
+  double get meters => _meters;
+  double get cms => _meters * 100;
+
+ Distnce operator +(Distnce other) {
+    return Distnce._(this._meters + other._meters);
+  } }
+void main() {
+  Distnce d1 = Distnce.kms(3.4);
+  Distnce d2 = Distnce.meters(1000);
+  print((d1 + d2).kms);
+}
