@@ -1,0 +1,7 @@
+
+We distinguish between stateless and stateful widgets in Flutter because stateless widgets don’t
+change theyre perfect for UI elements that won’t update. Stateful widgets, on the other hand, a
+re for UI elements that do change or update like a counter, form input, 
+
+Use a Stateless widget for content that stays the same after it's built, like text or icons.
+Use a Stateful widget when you need to track user input or change the UI based on user interactions.
