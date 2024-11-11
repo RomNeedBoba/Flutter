@@ -10,7 +10,7 @@ List<String> images = [
 ];
 
 void main() => runApp(const MaterialApp(
-      debugShowCheckedModeBanner: false, // Why this line ? Can you explain it ?
+      debugShowCheckedModeBanner: false, //answers in readme
       home: ImageGallary(),
     ));
 
