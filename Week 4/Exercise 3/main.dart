@@ -1,43 +1,41 @@
-
 import 'package:flutter/material.dart';
 
-List<String> images = [
-  "assets/bird.jpg",
-  "assets/bird2.jpg",
-  "assets/insect.jpg",
-  "assets/girl.jpg",
-  "assets/man.jpg",
-];
+void main() => runApp(const ImageGalleryApp());
 
-void main() => runApp(const MaterialApp(
-      debugShowCheckedModeBanner: false, //answers in readme
-      home: ImageGallary(),
-    ));
-
-class ImageGallary extends StatefulWidget {
-  const ImageGallary({
-    super.key,
-  });
+class ImageGalleryApp extends StatelessWidget {
+  const ImageGalleryApp({super.key});
 
   @override
-  State<ImageGallary> createState() => _ImageGallaryState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const ImageGallery(),
+    );
+  }
 }
 
-class _ImageGallaryState extends State<ImageGallary> {
+class ImageGallery extends StatefulWidget {
+  const ImageGallery({super.key});
+
+  @override
+  State<ImageGallery> createState() => _ImageGalleryState();
+}
+
+class _ImageGalleryState extends State<ImageGallery> {
+  final List<String> images = [
+    "assets/bird.jpg",
+    "assets/bird2.jpg",
+    "assets/insect.jpg",
+    "assets/girl.jpg",
+    "assets/man.jpg",
+  ];
   int _index = 0;
 
-  void _nextImage() {
+  void _changeImage(int delta) {
     setState(() {
-      _index = (_index + 1) % images.length;
+      _index = (_index + delta + images.length) % images.length;
     });
   }
-
-  void _previousImage() {
-    setState(() {
-      _index = (_index - 1) % images.length;
-    });
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,24 +43,21 @@ class _ImageGallaryState extends State<ImageGallary> {
       backgroundColor: Colors.green[50],
       appBar: AppBar(
         backgroundColor: Colors.green[400],
-        title: const Text('Image viewer'),
-        actions: <Widget>[
+        title: const Text('Image Viewer'),
+        actions: [
           IconButton(
             icon: const Icon(Icons.navigate_before),
-            tooltip: 'Go to the previous image',
-            onPressed: () => _previousImage(),
+            tooltip: 'Previous image',
+            onPressed: () => _changeImage(-1),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
-            child: IconButton(
-              icon: const Icon(Icons.navigate_next),
-              tooltip: 'Go to the next image',
-              onPressed: () => _nextImage(),
-            ),
+          IconButton(
+            icon: const Icon(Icons.navigate_next),
+            tooltip: 'Next image',
+            onPressed: () => _changeImage(1),
           ),
         ],
       ),
-      body: Image.asset(images[_index]),
+      body: Center(child: Image.asset(images[_index])),
     );
   }
 }
