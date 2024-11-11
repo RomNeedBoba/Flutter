@@ -1,108 +1,68 @@
+
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyCustomButtonApp());
-}
+List<String> images = [
+  "assets/bird.jpg",
+  "assets/bird2.jpg",
+  "assets/insect.jpg",
+  "assets/girl.jpg",
+  "assets/man.jpg",
+];
 
-class MyCustomButtonApp extends StatelessWidget {
-  const MyCustomButtonApp({super.key});
+void main() => runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false, // Why this line ? Can you explain it ?
+      home: ImageGallary(),
+    ));
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Unique Buttons"),
-          backgroundColor: Colors.deepPurple,
-        ),
-        body: const Padding(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              CustomActionButton(
-                label: "Confirm",
-                icon: Icons.check,
-                iconAlignment: IconPosition.right,
-                buttonType: ButtonType.primary,
-              ),
-              SizedBox(height: 12),
-              CustomActionButton(
-                label: "Reminder",
-                icon: Icons.alarm,
-                iconAlignment: IconPosition.left,
-                buttonType: ButtonType.secondary,
-              ),
-              SizedBox(height: 12),
-              CustomActionButton(
-                label: "Settings",
-                icon: Icons.settings,
-                iconAlignment: IconPosition.right,
-                buttonType: ButtonType.disabled,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-enum ButtonType {
-  primary(Colors.purple),
-  secondary(Colors.amber),
-  disabled(Colors.grey);
-
-  final Color color;
-
-  const ButtonType(this.color);
-}
-
-enum IconPosition { left, right }
-
-class CustomActionButton extends StatelessWidget {
-  final String label;
-  final IconData icon;
-  final IconPosition iconAlignment;
-  final ButtonType buttonType;
-
-  const CustomActionButton({
+class ImageGallary extends StatefulWidget {
+  const ImageGallary({
     super.key,
-    required this.label,
-    required this.icon,
-    this.iconAlignment = IconPosition.left,
-    this.buttonType = ButtonType.primary,
   });
 
   @override
+  State<ImageGallary> createState() => _ImageGallaryState();
+}
+
+class _ImageGallaryState extends State<ImageGallary> {
+  int _index = 0;
+
+  void _nextImage() {
+    setState(() {
+      _index = (_index + 1) % images.length;
+    });
+  }
+
+  void _previousImage() {
+    setState(() {
+      _index = (_index - 1) % images.length;
+    });
+  }
+
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: buttonType.color,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: TextButton(
-        onPressed: null,
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (iconAlignment == IconPosition.left) ...[
-                Icon(icon, color: Colors.white),
-                const SizedBox(width: 8),
-              ],
-              Text(
-                label,
-                style: const TextStyle(color: Colors.white, fontSize: 18),
-              ),
-              if (iconAlignment == IconPosition.right) ...[
-                const SizedBox(width: 8),
-                Icon(icon, color: Colors.white),
-              ],
-            ],
+    return Scaffold(
+      backgroundColor: Colors.green[50],
+      appBar: AppBar(
+        backgroundColor: Colors.green[400],
+        title: const Text('Image viewer'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.navigate_before),
+            tooltip: 'Go to the previous image',
+            onPressed: () => _previousImage(),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
+            child: IconButton(
+              icon: const Icon(Icons.navigate_next),
+              tooltip: 'Go to the next image',
+              onPressed: () => _nextImage(),
+            ),
+          ),
+        ],
       ),
+      body: Image.asset(images[_index]),
     );
   }
 }
