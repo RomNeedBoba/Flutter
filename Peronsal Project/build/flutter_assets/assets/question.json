@@ -1,0 +1,102 @@
+[
+    {
+      "question": "Apple",
+      "options": ["みかん", "りんご", "ぶどう", "レモン"],
+      "correctAnswer": "りんご"
+    },
+    {
+      "question": "Cat",
+      "options": ["犬", "ネコ", "ウサギ", "カメ"],
+      "correctAnswer": "ネコ"
+    },
+    {
+      "question": "Red",
+      "options": ["青", "緑", "赤", "白"],
+      "correctAnswer": "赤"
+    },
+    {
+      "question": "Big",
+      "options": ["小さい", "大きい", "長い", "高い"],
+      "correctAnswer": "大きい"
+    },
+    {
+      "question": "Happy",
+      "options": ["悲しい", "嬉しい", "疲れた", "怒った"],
+      "correctAnswer": "嬉しい"
+    },
+    {
+      "question": "Hot",
+      "options": ["冷たい", "暑い", "暖かい", "涼しい"],
+      "correctAnswer": "暑い"
+    },
+    {
+      "question": "Cold",
+      "options": ["暑い", "冷たい", "暖かい", "涼しい"],
+      "correctAnswer": "冷たい"
+    },
+    {
+      "question": "Rain",
+      "options": ["雪", "雨", "風", "雷"],
+      "correctAnswer": "雨"
+    },
+    {
+      "question": "Sun",
+      "options": ["月", "星", "太陽", "雲"],
+      "correctAnswer": "太陽"
+    },
+    {
+      "question": "Water",
+      "options": ["空気", "水", "火", "土"],
+      "correctAnswer": "水"
+    },
+    {
+      "question": "Mountain",
+      "options": ["海", "川", "山", "木"],
+      "correctAnswer": "山"
+    },
+    {
+      "question": "Tree",
+      "options": ["花", "木", "草", "葉"],
+      "correctAnswer": "木"
+    },
+    {
+      "question": "Book",
+      "options": ["雑誌", "新聞", "本", "ノート"],
+      "correctAnswer": "本"
+    },
+    {
+      "question": "Pen",
+      "options": ["鉛筆", "ボールペン", "消しゴム", "ノート"],
+      "correctAnswer": "ボールペン"
+    },
+    {
+      "question": "Door",
+      "options": ["窓", "ドア", "壁", "床"],
+      "correctAnswer": "ドア"
+    },
+    {
+      "question": "Chair",
+      "options": ["テーブル", "椅子", "ソファ", "ベッド"],
+      "correctAnswer": "椅子"
+    },
+    {
+      "question": "Car",
+      "options": ["自転車", "バイク", "車", "バス"],
+      "correctAnswer": "車"
+    },
+    {
+      "question": "Airplane",
+      "options": ["船", "飛行機", "電車", "バス"],
+      "correctAnswer": "飛行機"
+    },
+    {
+      "question": "Food",
+      "options": ["水", "食べ物", "飲み物", "お菓子"],
+      "correctAnswer": "食べ物"
+    },
+    {
+      "question": "Thank you",
+      "options": ["こんにちは", "ありがとう", "こんばんは", "さようなら"],
+      "correctAnswer": "ありがとう"
+    }
+  ]
