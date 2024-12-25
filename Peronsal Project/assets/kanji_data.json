@@ -1,0 +1,110 @@
+[
+    {
+      "id": 1,
+      "kanji": "抗",
+      "onyomi": "コウ",
+      "kunyomi": "あらがう",
+      "meaning": "対抗する、抵抗する",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "ទប់ទល់"
+    },
+    {
+      "id": 2,
+      "kanji": "踏",
+      "onyomi": "トウ",
+      "kunyomi": "ふむ、ふまえる",
+      "meaning": "踏みつける、踏まえる",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "ចាប់ផ្តើម"
+    },
+    {
+      "id": 3,
+      "kanji": "避",
+      "onyomi": "ヒ",
+      "kunyomi": "さける、よける",
+      "meaning": "避ける、よける",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "ចៀសវាង"
+    },
+    {
+      "id": 4,
+      "kanji": "聴",
+      "onyomi": "チョウ",
+      "kunyomi": "きく",
+      "meaning": "聞く",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "ស្ដាប់"
+    },
+    {
+      "id": 5,
+      "kanji": "為",
+      "onyomi": "イ",
+      "kunyomi": "ため、なる、なす、する",
+      "meaning": "ために、なる",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "ដើម្បី"
+    },
+    {
+      "id": 6,
+      "kanji": "抑",
+      "onyomi": "ヨク",
+      "kunyomi": "おさえる",
+      "meaning": "抑える",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "ចុច"
+    },
+    {
+      "id": 7,
+      "kanji": "弾",
+      "onyomi": "ダン",
+      "kunyomi": "ひく、はずむ",
+      "meaning": "弾く、弾む",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "បាញ់"
+    },
+    {
+      "id": 8,
+      "Kanji": "伴",
+      "onyomi": "ハン",
+      "kunyomi": "ともなう",
+      "meaning": "伴う",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "អម"
+    },
+    {
+      "id": 9,
+      "kanji": "掲",
+      "onyomi": "ケイ",
+      "kunyomi": "かかげる",
+      "meaning": "掲げる",
+      "videoPath": "assets/videos/Kanji12.MP4",
+      "khmer": "លើក"
+    },
+    {
+      "id": 10,
+      "kanji": "躍",
+      "onyomi": "ヤク",
+      "kunyomi": "おどる",
+      "meaning": "躍る",
+      "videoPath": "assets/videos/kKanji12.MP4",
+      "khmer": "រាំ"
+    },
+    {
+      "id": 11,
+      "kanji": "学",
+      "onyomi": "ガク",
+      "kunyomi": "まなぶ",
+      "meaning": "学ぶ",
+      "videoPath": "assets/videos/kKanji12.MP4",
+      "khmer": "សិក្សា"
+    },
+    {
+      "id": 12,
+      "kanji": "書",
+      "onyomi": "ショ",
+      "kunyomi": "かく",
+      "meaning": "書く",
+      "videoPath": "assets/videos/kKanji12.MP4",
+      "khmer": "សរសេរ"
+    }
+  ]
